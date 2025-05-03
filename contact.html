@@ -4081,37 +4081,85 @@ flexibility(document.documentElement);
 															<form id="contact-form"
 																action="https://formsubmit.co/ferryjulyo64@gmail.com"
 																method="POST">
-																<div class="form-group">
-																	<label for="name">Name</label>
-																	<input type="text" id="name" name="name" required>
+
+																<!-- Nama -->
+																<div class="srfm-block-wrap">
+																	<label for="srfm-input-name">Name</label>
+																	<input class="srfm-input-common srfm-input-input"
+																		type="text" name="name" id="srfm-input-name"
+																		aria-describedby="srfm-error-name"
+																		maxlength="100" placeholder="Nama Lengkap"
+																		data-srfm-mask="none" required>
+																</div>
+																<div class="srfm-error-wrap">
+																	<div class="srfm-error-message"
+																		data-srfm-id="srfm-error-name"
+																		data-error-msg="Nama wajib diisi.">
+																		Nama wajib diisi.
+																	</div>
 																</div>
 
-																<div class="form-group">
-																	<label for="email">Email</label>
-																	<input type="email" id="email" name="email"
-																		required>
+																<!-- Email -->
+																<div class="srfm-block-wrap">
+																	<label for="srfm-input-email">Email</label>
+																	<input class="srfm-input-common srfm-input-input"
+																		type="email" name="email" id="srfm-input-email"
+																		aria-describedby="srfm-error-email"
+																		maxlength="100" placeholder="Alamat Email"
+																		data-srfm-mask="none" required>
+																</div>
+																<div class="srfm-error-wrap">
+																	<div class="srfm-error-message"
+																		data-srfm-id="srfm-error-email"
+																		data-error-msg="Email tidak valid.">
+																		Email tidak valid.
+																	</div>
 																</div>
 
-																<div class="form-group">
-																	<label for="subject">Subject</label>
-																	<input type="text" id="subject" name="subject"
-																		required>
+																<!-- Subject -->
+																<div class="srfm-block-wrap">
+																	<label for="srfm-input-subject">Subject</label>
+																	<input class="srfm-input-common srfm-input-input"
+																		type="text" name="subject"
+																		id="srfm-input-subject"
+																		placeholder="Judul Pesan" required>
 																</div>
 
-																<div class="form-group">
-																	<label for="message">Message</label>
-																	<textarea id="message" name="message" rows="5"
-																		required></textarea>
+																<!-- Pesan -->
+																<div class="srfm-block-wrap">
+																	<label for="srfm-input-message">Message</label>
+																	<textarea
+																		class="srfm-input-common srfm-input-textarea"
+																		name="message" id="srfm-input-message" rows="5"
+																		aria-describedby="srfm-error-message"
+																		maxlength="500"
+																		placeholder="Tulis pesan Anda di sini..."
+																		data-srfm-mask="none" required></textarea>
+																</div>
+																<div class="srfm-error-wrap">
+																	<div class="srfm-error-message"
+																		data-srfm-id="srfm-error-message"
+																		data-error-msg="Pesan tidak boleh kosong.">
+																		Pesan tidak boleh kosong.
+																	</div>
 																</div>
 
-																<!-- FormSubmit options -->
+																<!-- Hidden input dari FormSubmit -->
 																<input type="hidden" name="_captcha" value="false">
 																<input type="hidden" name="_template" value="table">
 																<input type="hidden" name="_next" value="">
 
-																<button type="submit">Send Message</button>
+																<!-- Tombol Submit -->
+																<div class="srfm-submit-container">
+																	<button class="srfm-submit-button srfm-button"
+																		type="submit">
+																		Send Message
+																	</button>
+																</div>
+
 															</form>
 														</div>
+
 
 														<!-- Success message box (initially hidden) -->
 														<div class="srfm-single-form srfm-success-box in-page"
